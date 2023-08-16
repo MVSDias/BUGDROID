@@ -1,24 +1,36 @@
+@font-face {
+  font-family: idroid;
+  src: url('IDroid.otf') format('opentype');
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
+.cabecalho {
   background-image: linear-gradient(to bottom,#43B974, #28935B, #195e38, #082214);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   width: 100%;
-  height: 150px;
+  height: 165px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   /* shorthand de font - style - wight - size - family -> ex. font: italic bolder 30px 'arial' , sans-serif;*/
 }
 
-nav {
+.menu {
 background-color: #082214;
-display: inline-block;
+
 width: 100%;
-height: 30px;
+height: 46px;
+padding: 10px;
 box-shadow: 0 7px 7px rgba(0, 0, 0, 0.315);
+display: flex;
+justify-content: flex-start;
+align-items: center;
 }
 
 body {
@@ -27,40 +39,61 @@ background-color: #B0FFC9;
 
 
 h1 {
-  font-size: 27px;
+  font-size: 4.2em;
   text-align: center;
-  line-height: 2em;
   letter-spacing: -1px;
   font-family: Arial, Helvetica, sans-serif;
   font-stretch: 87%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-
+ 
+  
 }
+
+h2 {
+  font-size: 30px;
+  font-family: idroid;
+  color:#082214;
+  padding-top: 17px;
+  margin-left: 20px;
+}
+
+h3 {
+  font-size: 23px;
+  font-family: idroid;
+  color:#082214;
+  margin-left: 20px;
+}
+
 h4 {
-  font-size: 14px;
+  font-size: 1.1em;
   opacity: 0.7;
   text-align: center;
-  max-width: 600px;
-  margin-left: 100px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-
+  margin:0 auto;
+  max-width: 850px;
+  
 }
 
 .link {
   
   color: white;
-  padding-left: 10px;
-  font-size: 10px;
+  margin-left: 30px;
+  font-size: 15px;
   cursor: pointer;
-  
-
-
+   
 }
+
+.link:hover {
+  color: green;
+  background-color: #B0FFC9;
+  transition-duration: .8;
+}
+
+
+
+.paragrafo {
+  font-size: 18px;
+}
+
 
 .link-irina {
 color: black;
@@ -75,26 +108,6 @@ color: blue;
 text-decoration: underline;
 
 }
-
-.link:hover {
-  color: green;
-  background-color: #B0FFC9;
-  transition-duration: .8;
-}
-
-
-@font-face {
-      font-family: idroid;
-      src: url('IDroid.otf') format('opentype');
-  }
-
-  h2 {
-      font-family: idroid;
-      color:#082214;
-      padding-top: 17px;
-      margin-left: 20px;
-
-  }
 
   main strong {
     color: #066a27;
@@ -119,19 +132,13 @@ section {
   margin-right: auto;
 }
 
-p {
+.paragrafo {
   text-indent: 28px;
   text-align: justify;
   font-size: 12px;
   margin: 10px 15px;
 }
 
-h3 {
-  font-family: idroid;
-  color:#082214;
-  margin-left: 20px;
-
-}
 
 .link-externo {
   text-decoration: none;
@@ -169,6 +176,7 @@ h3 {
 }
 .irina {
   width: 100%;
+  height: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -186,7 +194,7 @@ span {
 
 .video {
   width: 100%;
-  height: 300px;
+  height: 350px;
   padding: 30px;
   background-color: #0e3e25;
   
@@ -211,21 +219,21 @@ span {
   
   border-radius: 20px;
   width: 96%;
-  height: 100%;
+  height:400px;
   background-color:#B0FFC9;
-  margin: 14px 30px 10px 10px;
-  padding-bottom: 10px;
+  margin: 14px 30px 10px 16px;
+  
   
 }
 
 footer {
   background-color: #28935B;
-  height: 20px;
+  height: 40px;
   
 }
 .footer {
   text-align: center;
-  padding-top: 4px ;
+  padding: 10px;
   color: white;
   
   
@@ -240,15 +248,13 @@ footer > strong {
 
 .lista {
   columns: 2;
-  
-  margin-left: 30px;
-  font-size: 10px;
+  padding-bottom: 8px;
+  margin-left: 36px;
+  margin-right: -70px;
+  font-size: 15px;
 }
   
 
-ul {
-  list-style-type: none;
-}
 
 .check {
   
@@ -256,19 +262,87 @@ ul {
 }
 
 .paragrafo{
-  font-size: 10px;
+  font-size: 16px;
   margin: 10px 15px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-
-@media screen and (max-width: 700px){
-  .caixa-2 {
-      margin: 14px auto 10px auto;
+@media screen and (max-width: 900px){
+  
+  .paragrafo {
+    font-size: 14px;
   }
-
- 
-  .bugdroid {
-    width: 70%;
+  .lista {
+    font-size: 15px;
+    margin-right: -153px;
   }
   
 }
+
+@media screen and (max-width: 450px){
+  h1 {
+    font-size: 2.3em;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: .8em;
+    max-width: 320px;
+  }
+
+  .link {
+    font-size: 12px;
+  }
+
+  .paragrafo {
+    font-size: 13px;
+  }
+
+  .caixa-2 {
+    height: 500px;
+    margin: 14px 30px 10px 7px
+  }
+
+  .lista {
+    font-size: 13px;
+    margin-left: 13px;
+    margin-right: -51px;
+  }
+
+  
+
+}
+
+@media screen and (max-width: 380px){
+
+    .lista {
+      font-size: 12px;
+    }
+
+    .footer {
+      padding: 0;
+    }
+
+    .footer {
+      font-size: 13px;
+    }
+
+    footer {
+      width: 100vw;
+      padding: 5px;
+    }
+
+
+
+}
+
+
+
+
